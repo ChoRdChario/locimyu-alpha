@@ -8,7 +8,7 @@
       version: "α.2025-12-17",
     },
     google: {
-      M5064422835-upqa915t5l5bdvsn8t0n0i33hsv8ubtu.apps.googleusercontent.com",
+      clientId: "155064422835-upqa915t5l5bdvsn8t0n0i33hsv8ubtu.apps.googleusercontent.com",
       apiKey: "AIzaSyCzKsz8seQO-gXJssRDo-YAB06guAH1DNY",
     },
   };
@@ -16,7 +16,9 @@
   // Expose for app code
   window.__LM_CONFIG = Object.assign(window.__LM_CONFIG||{}, cfg);
   window.__LM_CLIENT_ID = cfg.google.clientId;
+  window.GIS_CLIENT_ID = cfg.google.clientId;
   window.__LM_API_KEY = cfg.google.apiKey;
+  window.GOOGLE_API_KEY = cfg.google.apiKey;
 
   // Keep legacy DOM hooks in sync (some modules read from meta tags)
   function setMeta(name, content){
